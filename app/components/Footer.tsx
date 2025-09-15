@@ -26,11 +26,11 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-2 text-gray-400 mb-1">
             <Phone size={18} />
-            <span>+250 788 123 456</span>
+            <span>+250 783 214 787</span>
           </div>
           <div className="flex items-center gap-2 text-gray-400">
             <Mail size={18} />
-            <span>info@bosconnect.rw</span>
+            <span>bosconnect.ltd2025@gmail.com</span>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ export default function Footer() {
               <Facebook size={24} />
             </Link>
             <Link
-              href="https://twitter.com"
+              href="https://x.com/bosconnectLtd"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition"

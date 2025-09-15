@@ -1,13 +1,11 @@
-import Home from "./pages/Home";
+import Services from "@/app/pages/Services";
 export const metadata = {
-  title: "Home | Bosconnect Ltd",
-  description:
-    "Empowering digital growth with smart solutions at Bosconnect Ltd.",
+  title: "Services | Bosconnect Ltd",
+  description: "Discover the range of services Bosconnect Ltd offers.",
   openGraph: {
-    title: "Home | Bosconnect Ltd",
-    description:
-      "Empowering digital growth with smart solutions at Bosconnect Ltd.",
-    url: "https://bosconnect.vercel.app",
+    title: "Services | Bosconnect Ltd",
+    description: "Discover the range of services Bosconnect Ltd offers.",
+    url: "https://bosconnect.vercel.app/services",
     images: [
       {
         url: "https://bosconnect.vercel.app/Bosconnect_Logo.png", // ✅ full URL required
@@ -19,9 +17,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Home | Bosconnect Ltd",
-    description:
-      "Empowering digital growth with smart solutions at Bosconnect Ltd.",
+    title: "Services | Bosconnect Ltd",
+    description: "Discover the range of services Bosconnect Ltd offers.",
     images: [
       {
         url: "https://bosconnect.vercel.app/Bosconnect_Logo.png", // ✅ full URL required
@@ -33,6 +30,6 @@ export const metadata = {
   },
 };
 
-export default function HomePage() {
-  return <Home />;
+export default function ServicesPage() {
+  return <Services />;
 }
