@@ -1,103 +1,166 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { ArrowRight, Laptop, Globe, Users, Layers } from "lucide-react";
+import Infotech from "@/public/InfoTech logo.png";
+import MSTECH from "@/public/mstech.jpg";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const clients = [
+    { id: 1, name: "Infotech Scholars", logo: Infotech },
+    { id: 2, name: "MSTECH", logo: MSTECH },
+    { id: 3, name: "Client 3", logo: Infotech },
+    { id: 4, name: "Client 4", logo: Infotech },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  return (
+    <div className="w-full min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-blue-700 to-blue-500 text-white min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-4xl md:text-6xl font-extrabold leading-tight"
+        >
+          Bosconnect Ltd
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="mt-4 text-lg md:text-xl max-w-2xl"
+        >
+          Empowering digital growth with smart solutions in web development,
+          hosting, training, and online services.
+        </motion.p>
+        <motion.a
+          href="/services"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-6 inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition"
+        >
+          Explore Services <ArrowRight size={20} />
+        </motion.a>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-6 bg-gray-50 text-center">
+        <h2 className="text-3xl font-bold mb-6">What We Offer</h2>
+        <p className="max-w-3xl mx-auto text-gray-600 mb-10">
+          We provide digital services that empower individuals, businesses, and
+          organizations to grow and succeed in the modern world.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-white rounded-2xl shadow-lg"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Laptop className="text-blue-600 mx-auto mb-4" size={40} />
+            <h3 className="text-xl font-semibold mb-2">Web Development</h3>
+            <p className="text-gray-600">
+              Professional and responsive websites tailored to your business
+              needs.
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-white rounded-2xl shadow-lg"
           >
-            Read our docs
-          </a>
+            <Globe className="text-blue-600 mx-auto mb-4" size={40} />
+            <h3 className="text-xl font-semibold mb-2">Hosting & Domains</h3>
+            <p className="text-gray-600">
+              Reliable hosting and domain services that keep you connected
+              worldwide.
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-white rounded-2xl shadow-lg"
+          >
+            <Users className="text-blue-600 mx-auto mb-4" size={40} />
+            <h3 className="text-xl font-semibold mb-2">Training</h3>
+            <p className="text-gray-600">
+              Hands-on programming and digital skills training for all levels.
+            </p>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-16 px-6 bg-white text-center">
+        <h2 className="text-3xl font-bold mb-6">Why Choose Bosconnect?</h2>
+        <p className="max-w-3xl mx-auto text-gray-600 mb-10">
+          Our focus is on delivering innovative, affordable, and impactful tech
+          solutions with customer satisfaction at the core.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <motion.div
+            whileHover={{ scale: 1.03 }}
+            className="p-6 border rounded-2xl shadow-sm"
+          >
+            <Layers className="text-blue-600 mx-auto mb-4" size={36} />
+            <h3 className="text-xl font-semibold mb-2">Innovative Solutions</h3>
+            <p className="text-gray-600">
+              We blend creativity and technology to create impactful products.
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.03 }}
+            className="p-6 border rounded-2xl shadow-sm"
+          >
+            <Users className="text-blue-600 mx-auto mb-4" size={36} />
+            <h3 className="text-xl font-semibold mb-2">Client-Centered</h3>
+            <p className="text-gray-600">
+              Every service we offer is customized to meet your unique needs.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Trusted Clients Section */}
+      <section className="py-16 px-6 bg-gray-50 text-center">
+        <h2 className="text-3xl font-bold mb-10">Our Trusted Clients</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 max-w-6xl mx-auto items-center justify-items-center">
+          {clients.map((client) => (
+            <motion.div
+              key={client.id}
+              whileHover={{ scale: 1.05 }}
+              className="w-24 h-24 flex items-center justify-center bg-white p-4 rounded-lg shadow transition-transform"
+            >
+              <Image
+                src={client.logo} // works because it's imported
+                alt={client.name}
+                className="object-contain"
+                width={80} // adjust size as needed
+                height={80}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-blue-700 text-white text-center px-6">
+        <h2 className="text-3xl font-bold mb-4">Let’s Build Together</h2>
+        <p className="mb-6 max-w-xl mx-auto">
+          Ready to take your business to the next level? Partner with Bosconnect
+          for reliable digital solutions.
+        </p>
+        <motion.a
+          href="/contact"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          Contact Us <ArrowRight size={20} />
+        </motion.a>
+      </section>
     </div>
   );
 }
