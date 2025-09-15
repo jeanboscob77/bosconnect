@@ -116,7 +116,7 @@ export default function ProjectsPage() {
           whileHover={{ scale: 1.02 }}
           className="mt-4 text-lg md:text-xl max-w-2xl mx-auto"
         >
-          Take a look at some of the work we’ve done for our clients.
+          Take a look at some of the work we&rsquo;ve done for our clients.
         </motion.p>
       </section>
 
