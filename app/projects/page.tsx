@@ -86,7 +86,7 @@ export default function ProjectsPage() {
       ? projects
       : projects.filter((project) => project.category === filter);
 
-  // Sort filtered projects by date (fixed)
+  // Sort filtered projects by date
   const sortedProjects = [...filteredProjects].sort((a, b) => {
     if (sortOrder === "Newest")
       return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -116,7 +116,7 @@ export default function ProjectsPage() {
           whileHover={{ scale: 1.02 }}
           className="mt-4 text-lg md:text-xl max-w-2xl mx-auto"
         >
-          Take a look at some of the work we've done for our clients.
+          {`Take a look at some of the work we've done for our clients.`}
         </motion.p>
       </section>
 
@@ -205,8 +205,7 @@ export default function ProjectsPage() {
       <section className="py-16 bg-blue-700 text-white text-center px-6">
         <h2 className="text-3xl font-bold mb-4">Start Your Project With Us</h2>
         <p className="mb-6 max-w-xl mx-auto">
-          Want to see your ideas come to life? Contact Bosconnect and let's
-          build something amazing together.
+          {`Want to see your ideas come to life? Contact Bosconnect and let's build something amazing together.`}
         </p>
         <motion.a
           href="/contact"
