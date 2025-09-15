@@ -213,11 +213,11 @@ export default function Home() {
               className="w-24 h-24 flex items-center justify-center bg-white p-4 rounded-lg shadow transition-transform"
             >
               <Image
-                src={client.logo} // works because it's imported
+                src={client.logo} //
                 alt={client.name}
                 className="object-contain"
-                width={80} // adjust size as needed
-                height={80}
+                width={70}
+                height={70}
               />
             </motion.div>
           ))}
