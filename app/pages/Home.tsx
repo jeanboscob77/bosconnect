@@ -134,7 +134,7 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-700 to-blue-500 text-white min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
+      <section className="relative bg-gradient-to-r from-blue-700 to-blue-500 text-white min-h-[60vh] flex flex-col items-center justify-center text-center px-6">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
