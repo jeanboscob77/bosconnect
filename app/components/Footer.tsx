@@ -8,7 +8,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  X,
 } from "lucide-react";
 import Xlogo from "@/public/Asset/logo-white.png";
 export default function Footer() {
