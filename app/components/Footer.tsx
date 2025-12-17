@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/Context/LanguageContext";
 import {
   Facebook,
   Instagram,
@@ -11,15 +12,15 @@ import {
 } from "lucide-react";
 import Xlogo from "@/public/Asset/logo-white.png";
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-gray-900 text-white py-12 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
         {/* Company Info */}
         <div>
           <h3 className="text-xl font-bold mb-4">Bosconnect Ltd</h3>
-          <p className="text-gray-400 mb-2">
-            Empowering digital growth with smart solutions.
-          </p>
+          <p className="text-gray-400 mb-2">{t.conclude}</p>
           <div className="flex items-center gap-2 text-gray-400 mb-1">
             <MapPin size={18} />
             <span>Gasabo, Kigali, Rwanda</span>
@@ -36,26 +37,26 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+          <h3 className="text-xl font-bold mb-4">{t.quickLinks}</h3>
           <ul className="text-gray-400 space-y-2">
             <li>
               <Link href="/" className="hover:text-blue-500 transition">
-                Home
+                {t.home}
               </Link>
             </li>
             <li>
               <Link href="/projects" className="hover:text-blue-500 transition">
-                Projects
+                {t.projects}
               </Link>
             </li>
             <li>
               <Link href="/services" className="hover:text-blue-500 transition">
-                Services
+                {t.services}
               </Link>
             </li>
             <li>
               <Link href="/contact" className="hover:text-blue-500 transition">
-                Contact
+                {t.contact}
               </Link>
             </li>
           </ul>
@@ -63,7 +64,7 @@ export default function Footer() {
 
         {/* Social Links */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+          <h3 className="text-xl font-bold mb-4">{t.followUs}</h3>
           <div className="flex gap-4">
             <Link
               href="https://web.facebook.com/people/Bosconnect-Ltd/61578961479028/"
@@ -102,7 +103,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-12 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} Bosconnect Ltd. All rights reserved.
+        &copy; {new Date().getFullYear()} Bosconnect Ltd. {t.reserved}
       </div>
     </footer>
   );
