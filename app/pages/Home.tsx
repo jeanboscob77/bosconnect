@@ -6,12 +6,6 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/Context/LanguageContext";
 import Infotech from "@/public/InfoTech logo.png";
 import MSTECH from "@/public/mstech.jpg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 // Import your icons
 import {
@@ -31,10 +25,7 @@ import {
 
 export default function Home() {
   const { t } = useLanguage();
-  // Flatten all services into a single array
-  const allServices = t.servicesSection.groupedServices.flatMap(
-    (group) => group.services
-  );
+ 
   const clients = [
     { id: 1, name: "Infotech Scholars", logo: Infotech },
     { id: 2, name: "MSTECH", logo: MSTECH },

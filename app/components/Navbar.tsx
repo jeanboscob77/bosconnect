@@ -60,9 +60,7 @@ export default function Navbar() {
             width={60}
             height={60}
           />
-          <span className="text-lg font-bold text-gray-200">
-            Bosconnect Ltd
-          </span>
+         
         </Link>
 
         {/* Desktop Menu */}
