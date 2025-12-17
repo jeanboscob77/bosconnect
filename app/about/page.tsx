@@ -37,13 +37,24 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <section className="container mx-auto px-6 py-12">
+      {/* Background image layer */}
+      <div className="absolute inset-0 opacity-30">
+        <Image
+          src="/about.jpg"
+          alt="Digital growth illustration"
+          className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          priority
+        />
+      </div>
       {/* Page Title */}
       <h1 className="text-4xl font-bold text-center text-blue-700 mb-6">
         About Us
       </h1>
 
       {/* Company Intro */}
-      <p className="text-center max-w-2xl mx-auto text-gray-700 mb-12">
+      <p className="text-center max-w-2xl mx-auto text-slate-900 font-semibold mb-12">
         At <span className="font-semibold text-blue-600">Bosconnect Ltd</span>,
         we are dedicated to driving digital growth and empowering businesses
         with innovative technology solutions. From web development to online
