@@ -1,19 +1,33 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
-
+import { useLanguage } from "@/Context/LanguageContext";
 export default function ContactPage() {
+  const { t } = useLanguage();
+
   return (
     <div className="w-full min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-700 to-blue-500 text-white py-24 flex flex-col items-center justify-center text-center px-6">
+        <div className="absolute inset-0 opacity-30">
+          <Image
+            src="/contact.jpg"
+            alt="Digital growth illustration"
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            priority
+          />
+        </div>
+
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="text-4xl md:text-6xl font-extrabold leading-tight"
         >
-          Contact Us
+          {t.contact}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -21,8 +35,7 @@ export default function ContactPage() {
           transition={{ delay: 0.5, duration: 1 }}
           className="mt-4 text-lg md:text-xl max-w-2xl"
         >
-          Have a question or feedback? Fill out the form below or reach out to
-          us directly.
+          {t.contactPrompt}
         </motion.p>
       </section>
 
@@ -83,18 +96,15 @@ export default function ContactPage() {
 
       {/* Call to Action */}
       <section className="py-16 bg-blue-700 text-white text-center px-6">
-        <h2 className="text-3xl font-bold mb-4">Let’s Build Together</h2>
-        <p className="mb-6 max-w-xl mx-auto">
-          Ready to take your business to the next level? Partner with Bosconnect
-          for reliable digital solutions.
-        </p>
+        <h2 className="text-3xl font-bold mb-4">{t.cta.title}</h2>
+        <p className="mb-6 max-w-xl mx-auto">{t.readyToPartner}</p>
         <motion.a
           href="/services"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition"
         >
-          Explore Services <ArrowRight size={20} />
+          {t.exploreService} <ArrowRight size={20} />
         </motion.a>
       </section>
     </div>

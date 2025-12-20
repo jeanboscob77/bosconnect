@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import infotech from "@/public/Asset/Infotech.png";
+import { useLanguage } from "@/Context/LanguageContext";
 
 type Project = {
   id: number;
@@ -69,6 +70,7 @@ const cardVariants: Variants = {
 };
 
 export default function ProjectsPage() {
+  const { t } = useLanguage();
   const [filter, setFilter] = useState("All");
   const [sortOrder, setSortOrder] = useState("Newest");
 
@@ -106,7 +108,7 @@ export default function ProjectsPage() {
           whileHover={{ scale: 1.05 }}
           className="text-4xl md:text-6xl font-extrabold leading-tight"
         >
-          Our Projects
+          {t.ourProjects}
         </motion.h1>
 
         <motion.p
@@ -116,7 +118,7 @@ export default function ProjectsPage() {
           whileHover={{ scale: 1.02 }}
           className="mt-4 text-lg md:text-xl max-w-2xl mx-auto"
         >
-          {`Take a look at some of the work we've done for our clients.`}
+          {t.projectsSubtitle}
         </motion.p>
       </section>
 
@@ -203,17 +205,16 @@ export default function ProjectsPage() {
 
       {/* Call to Action */}
       <section className="py-16 bg-blue-700 text-white text-center px-6">
-        <h2 className="text-3xl font-bold mb-4">Start Your Project With Us</h2>
-        <p className="mb-6 max-w-xl mx-auto">
-          {`Want to see your ideas come to life? Contact Bosconnect and let's build something amazing together.`}
-        </p>
+        <h2 className="text-3xl font-bold mb-4">{t.startProject}</h2>
+        <p className="mb-6 max-w-xl mx-auto">{t.contactCTA}</p>
         <motion.a
           href="/contact"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition"
         >
-          Contact Us <ArrowRight size={20} />
+          {t.contact}
+          <ArrowRight size={20} />
         </motion.a>
       </section>
     </div>

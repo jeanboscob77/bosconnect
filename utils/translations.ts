@@ -136,6 +136,40 @@ export const translations = {
     readyToWork: "Ready to Work With Us?",
     readyToworkDes:
       "Whether you’re looking for development, hosting, or training, Bosconnect has the right solution for you.",
+    //ABOUT PAGE TRANSLATIONS
+    aboutTitle: "About Us",
+    aboutDescription:
+      "At Bosconnect Ltd, we are dedicated to driving digital growth and empowering businesses with innovative technology solutions. From web development to online services, we aim to connect people and ideas through technology.",
+    missionTitle: "Our Mission",
+    missionDescription:
+      "To provide affordable and reliable digital solutions that empower individuals, businesses, and communities in Rwanda and beyond.",
+    visionTitle: "Our Vision",
+    visionText:
+      "To become a leading tech company that shapes the digital future across Africa by fostering innovation and inclusive growth.",
+    valuesTitle: "Our Values",
+    innovation: "Innovation",
+    integrity: "Integrity",
+    excellence: "Excellence",
+    customerCentricService: "Customer-Centric Service",
+    meetTheFounder: "Meet the Founder",
+
+    aboutFounder:
+      "With a strong background in Business Information Technology and a passion for innovation, Jean Bosco founded Bosconnect Ltd to empower communities through technology and digital solutions.",
+    founderTitle: "Founder & CEO",
+
+    /// PROJECT PAGE TRANSLATIONS
+    ourProjects: "Our Projects",
+    projectsSubtitle:
+      "Take a look at some of the work we've done for our clients.",
+    startProject: "Start Your Project With Us",
+    contactCTA:
+      "Want to see your ideas come to life? Contact Bosconnect and let's build something amazing together.",
+
+    /// CONTACT PAGE TRANSLATIONS
+    contactPrompt:
+      "Have a question or feedback? Fill out the form below or reach out to us directly.",
+    readyToPartner:
+      "Ready to take your business to the next level? Partner with Bosconnect for reliable digital solutions.",
   },
   rw: {
     home: "Ahabanza",
@@ -273,5 +307,38 @@ export const translations = {
     readyToWork: "Witeguye gukorana natwe?",
     readyToworkDes:
       "Niba ushaka serivisi z’iterambere rya porogaramu, kwakira imbuga (hosting), cyangwa amahugurwa, Bosconnect ifite igisubizo gikwiye ku byo ukeneye.",
+
+    //ABOUT PAGE TRANSLATIONS
+    aboutTitle: "Abo Turibo",
+    aboutDescription:
+      "Muri Bosconnect Ltd, twiyemeje guteza imbere iterambere ry’ikoranabuhanga no gufasha ubucuruzi gukura binyuze mu bisubizo bishya by’ikoranabuhanga. Duhereye ku gukora imbuga n’ikorabuhanga kugeza kuri serivisi zo kuri internet, intego yacu ni guhuza abantu n’ibitekerezo hifashishijwe ikoranabuhanga.",
+    missionTitle: "Inshingano Yacu",
+    missionDescription:
+      "Gutanga ibisubizo by’ikoranabuhanga bihendutse kandi byizewe bifasha abantu ku giti cyabo, ubucuruzi, n’imiryango mu Rwanda no hanze yarwo gutera imbere.",
+    visionTitle: "Icyerekezo Cyacu",
+    visionText:
+      "Kuba ikigo cy’ikoranabuhanga kiyoboye mu guhanga ejo hazaza h’ikoranabuhanga muri Afurika, binyuze mu guteza imbere udushya n’iterambere rigera kuri bose.",
+    valuesTitle: "Indangagaciro Zacu",
+    innovation: "Udushya",
+    integrity: "Ubunyangamugayo",
+    excellence: "Guharanira Ubudashyikirwa",
+    customerCentricService: "Serivisi Ikwiranye n’Umukiriya",
+    meetTheFounder: "Menye Uwayishinze",
+    aboutFounder:
+      "Afite ubumenyi bukomeye mu by'Ikoranabuhanga mu Bucuruzi (BIT) n’urukundo rwo guhanga udushya, Jean Bosco yashinze Bosconnect Ltd agamije guteza imbere imiryango binyuze mu ikoranabuhanga n'ibisubizo by'ikoranabuhanga.",
+    founderTitle: "Umuyobozi Mukuru",
+
+    ///PROJECT PAGE TRANSLATIONS
+    ourProjects: "Imishinga Yacu",
+    projectsSubtitle: "Reba bimwe mu bikorwa twakoze ku bakiliya bacu.",
+    startProject: "Tangira Umushinga Wawe Natwe",
+    contactCTA:
+      "Urashaka kubona ibitekerezo byawe bishyirwa mu bikorwa? Vugana na Bosconnect kandi twubake ikintu gikomeye hamwe.",
+
+    //// CONTACT PAGE TRANSLATIONS
+    contactPrompt:
+      "Ufite ikibazo cyangwa igitekerezo? Wuzuza ifishi iri hasi cyangwa kuri Telephone cyagwa emeyili bigaragara hasi.",
+    readyToPartner:
+      "Witeguye kuzamura ubucuruzi bwawe? Korana na Bosconnect ku bisubizo byizewe by'Ikoranabuhanga.",
   },
 } as const;
